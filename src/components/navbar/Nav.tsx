@@ -1,10 +1,9 @@
-import React from "react";
 import Logo from "../../assets/logo-text.png";
 
 const Nav = () => {
   return (
-    <div className="border-b border-gray-300">
-      <nav className="flex justify-between items-center w-11/12 mx-auto p-4">
+    <div className="shadow-sm border-b border-gray-200">
+      <nav className="flex justify-between items-center w-11/12 mx-auto py-4">
         <div className="md:hidden">
           <label className="btn btn-circle swap swap-rotate">
             {/* this hidden checkbox controls the state */}
