@@ -1,13 +1,11 @@
-import './App.css'
+import Nav from "./components/navbar/Nav";
 
 function App() {
-
-
   return (
     <>
-    <h2>Assignment- 05</h2>
+      <Nav></Nav>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
