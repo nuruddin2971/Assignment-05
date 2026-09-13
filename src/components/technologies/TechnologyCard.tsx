@@ -1,13 +1,16 @@
-import React from "react";
 import type { Itechnology } from "../../type/technologies";
 import RatingLogo from "../../assets/Symbol.png";
+import SelectedTechnologyCard from "./SelectedTechnologyCard";
 
-const TechnologyCard = ({ technologies }) => {
-  console.log(technologies, "tec from card");
+interface TechnologyCardProps {
+  technologies: Itechnology[];
+}
+
+const TechnologyCard = ({ technologies }: TechnologyCardProps) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 mt-20">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-20">
       <div className="grid grid-cols-1 md:col-span-3 md:grid-cols-3 gap-4">
-        {technologies.map((technology: Itechnology) => {
+        {technologies.map((technology) => {
           return (
             <div className="shadow-sm border-b border-gray-200 p-6 rounded-2xl space-y-4">
               <div className="flex justify-between items-center">
@@ -43,6 +46,7 @@ const TechnologyCard = ({ technologies }) => {
           );
         })}
       </div>
+      <SelectedTechnologyCard></SelectedTechnologyCard>
     </div>
   );
 };
