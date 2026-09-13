@@ -2,7 +2,7 @@ import Logo from "../../assets/logo-text.png";
 
 const Nav = () => {
   return (
-    <div className="shadow-sm border-b border-gray-200">
+    <div className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
       <nav className="flex justify-between items-center w-11/12 mx-auto py-4">
         <div className="md:hidden">
           <label className="btn btn-circle swap swap-rotate">

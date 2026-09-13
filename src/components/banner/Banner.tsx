@@ -1,4 +1,4 @@
-import BannarLogo from "../../../assets/banner-stack.png";
+import BannarLogo from "../../assets/banner-stack.png";
 
 const Banner = () => {
   return (
