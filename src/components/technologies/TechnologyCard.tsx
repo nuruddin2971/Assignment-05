@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Itechnology } from "../../type/technologies";
 import SelectedTechnologyCard from "./SelectedTechnologyCard";
 import SingleTechCard from "./SingleTechCard";
@@ -7,7 +8,7 @@ interface TechnologyCardProps {
 }
 
 const TechnologyCard = ({ technologies }: TechnologyCardProps) => {
-  
+  const [isSelectedTechCard, setIsSelectedTechCard] = useState([]);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-20">
@@ -17,11 +18,16 @@ const TechnologyCard = ({ technologies }: TechnologyCardProps) => {
             <SingleTechCard
               key={technology.id}
               technology={technology}
+              isSelectedTechCard={isSelectedTechCard}
+              setIsSelectedTechCard={setIsSelectedTechCard}
             ></SingleTechCard>
           );
         })}
       </div>
-      <SelectedTechnologyCard></SelectedTechnologyCard>
+      <SelectedTechnologyCard
+        isSelectedTechCard={isSelectedTechCard}
+        setIsSelectedTechCard={setIsSelectedTechCard}
+      ></SelectedTechnologyCard>
     </div>
   );
 };
