@@ -4,13 +4,11 @@ import { RxCross2 } from "react-icons/rx";
 import { toast } from "react-toastify";
 
 interface SelectedTechnologyCardProps {
-  selectedTechnologies: Itechnology[];
   isSelectedTechCard: Itechnology[];
   setIsSelectedTechCard: Dispatch<SetStateAction<Itechnology[]>>;
 }
 
 const SelectedTechnologyCard = ({
-  selectedTechnologies,
   isSelectedTechCard,
   setIsSelectedTechCard,
 }: SelectedTechnologyCardProps) => {
@@ -54,6 +52,7 @@ const SelectedTechnologyCard = ({
                           (item) => item.id !== tech.id,
                         ),
                       );
+
                       toast.info("Removed from stack!");
                     }}
                     className="text-gray-400 hover:text-red-500 text-lg font-bold px-2"

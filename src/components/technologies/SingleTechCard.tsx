@@ -15,19 +15,22 @@ const SingleTechCard = ({
   isSelectedTechCard,
   setIsSelectedTechCard,
 }: SingleTechCardProps) => {
-  const [isSelectedTech, setIsSelectedTech] = useState(false);
+  // const [isSelectedTech, setIsSelectedTech] = useState(false);
+  const isSelectedTech = isSelectedTechCard.some(
+    (item) => item.id === technology.id,
+  );
 
   const handleAddToCart = () => {
-    const isAlreadyEsists = isSelectedTechCard.some(
-      (item) => item.id === technology.id,
-    );
+    // const isAlreadyAdded = isSelectedTechCard.some(
+    //   (item) => item.id === technology.id,
+    // );
 
-    if (isAlreadyEsists) {
+    if (isSelectedTech) {
       toast.error("Already added to your stack!");
       return;
     }
 
-    setIsSelectedTech(true);
+    // setIsSelectedTech(true);
     setIsSelectedTechCard((stack) => [...stack, technology]);
     toast.success("Successfully added to stack!");
   };
@@ -59,15 +62,19 @@ const SingleTechCard = ({
 
         <button
           onClick={handleAddToCart}
-          className={`mt-4 rounded-xl btn btn-block btn-neutral hover:bg-neutral-800"}`}
-          disabled={isSelectedTech === true ? true : false}
+          className={`mt-4 rounded-xl btn btn-block btn-neutral ${
+            isSelectedTech
+              ? "bg-gray-400 text-gray-600 cursor-not-allowed opacity-60"
+              : "hover:bg-neutral-800"
+          }`}
+          // disabled={isSelectedTech}
         >
-          {isSelectedTech === false ? (
-            "Add to Stack"
-          ) : (
+          {isSelectedTech ? (
             <span className="flex items-center gap-2">
               <GiCheckMark /> Added to Stack
             </span>
+          ) : (
+            "Add to Stack"
           )}
         </button>
       </div>

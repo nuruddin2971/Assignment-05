@@ -8,7 +8,9 @@ interface TechnologyCardProps {
 }
 
 const TechnologyCard = ({ technologies }: TechnologyCardProps) => {
-  const [isSelectedTechCard, setIsSelectedTechCard] = useState([]);
+  const [isSelectedTechCard, setIsSelectedTechCard] = useState<Itechnology[]>(
+    [],
+  );
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-20">
