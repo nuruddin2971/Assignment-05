@@ -64,7 +64,7 @@ const SingleTechCard = ({
           onClick={handleAddToCart}
           className={`mt-4 rounded-xl btn btn-block btn-neutral ${
             isSelectedTech
-              ? "bg-gray-400 text-gray-600 cursor-not-allowed opacity-60"
+              ? "bg-gray-400 text-red-600 opacity-60"
               : "hover:bg-neutral-800"
           }`}
           // disabled={isSelectedTech}
