@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import { use } from "react";
 import TechnologyCard from "./TechnologyCard";
 import type { Itechnology } from "../../type/technologies";
 
@@ -13,7 +13,7 @@ const Technologies = ({ technologiesPromise }: TechnologiesProps) => {
     <div className="w-11/12 mx-auto space-y-3 mt-4">
       <div className="space-y-5 md:text-left text-center">
         <h2 className="font-extrabold text-4xl">
-          Explore the <span className="text-[#DB4CA9]">Technologies</span>
+          Explore the <span className="text-[#DB2777]">Technologies</span>
         </h2>
         <p>Pick one technology per category to build your ideal stack.</p>
       </div>

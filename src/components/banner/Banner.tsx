@@ -16,7 +16,7 @@ const Banner = () => {
           your next project.
         </p>
         <div className="flex justify-center md:justify-start gap-4">
-          <button className="btn text-white font-semibold bg-linear-to-r from-[#F97316] to-[#EC4899]">
+          <button className="btn text-white font-semibold bg-linear-to-r from-[#FF5722] to-[#D81B7E]">
             Explore Technologies
           </button>
           <button className="btn font-semibold w-42">Learn More</button>
